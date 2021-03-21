@@ -1,0 +1,7 @@
+#title, #loginForm, #signUpForm{
+	 text-align: center;
+}
+
+#notExistingUser:hover, #isExistingUser:hover {
+  color: blue;
+}
