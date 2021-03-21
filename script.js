@@ -23,6 +23,8 @@ function changeForms() {
 function login(){
 	document.querySelector("div#loginForm").style.display = "none";
 	document.querySelector("div#signUpForm").style.display = "none";
+	document.querySelector("header").style.display = "flex"
 }
+
 
 
