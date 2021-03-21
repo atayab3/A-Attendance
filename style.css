@@ -1,3 +1,33 @@
+header{
+	justify-content: space-around;
+	align-items: center;
+	padding:30px 10%;
+	display: none;
+}
+
+
+.navbar{
+	list-style: none; 
+}
+.nav_bar li{
+	display: inline-block;
+	padding: 5px 20px;
+	text-decoration: none;
+
+
+}
+a{
+	text-decoration: none;
+	color: red;
+}
+.navbar li a {
+	transition: all 0.3s ease 0s;
+	text-decoration: none;
+}
+
+.navbar li a: hover {
+	color: #0088a9;
+}
 #title, #loginForm, #signUpForm{
 	 text-align: center;
 }
