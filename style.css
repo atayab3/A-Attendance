@@ -3,34 +3,83 @@ header{
 	align-items: center;
 	padding:30px 10%;
 	display: none;
-}
+} 
 
+p, title, h1 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
 
 .navbar{
-	list-style: none; 
+	width: 100%;
+  background-color: #555;
+  overflow: auto;
 }
-.nav_bar li{
-	display: inline-block;
-	padding: 5px 20px;
-	text-decoration: none;
-
-
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
 }
-a{
-	text-decoration: none;
-	color: red;
+.navbar a:hover {
+  background-color: rgba(0, 5, 2, 0.966);
+}
+.navbar .active {
+  background-color: rgb(241, 179, 43);
 }
 .navbar li a {
 	transition: all 0.3s ease 0s;
 	text-decoration: none;
 }
 
-.navbar li a: hover {
-	color: #0088a9;
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  width: 100px;
 }
-#title, #loginForm, #signUpForm{
+
+.attendButton, .healthButton, .directButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  width: 100px;
+  position: relative;
+}
+
+/* Make the image responsive */
+.attendButton img, .healthButton img, .directButton img{
+  width: 100%;
+  height: auto;
+}
+
+.attendButton .attendbtn, .healthButton .healthbtn, .directButton .directbtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgba(85, 85, 85, 0);
+  color: white;
+  font-size: 16px;
+  padding: 80px 150px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.attendButton .attendbtn:hover, .healthButton .healthbtn:hover, .directButton .directbtn:hover {
+  background-color: rgba(0, 0, 0, 0.116);
+}
+
+#title, #loginForm, #signUpForm, #homePage{
 	 text-align: center;
 }
+
 
 #notExistingUser:hover, #isExistingUser:hover {
   color: blue;

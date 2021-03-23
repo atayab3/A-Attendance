@@ -7,6 +7,7 @@ var signUpPage = document.getElementById('signUpForm');
 signUpPage.querySelector('div#isExistingUser').addEventListener("click", changeForms);
 signUpPage.querySelector('#signup').addEventListener("click", login );
 
+document.getElementById("homebtn").addEventListener("click", home)
 
 function changeForms() {
 //tried using a boolean for if statement but it stayed true
@@ -23,8 +24,12 @@ function changeForms() {
 function login(){
 	document.querySelector("div#loginForm").style.display = "none";
 	document.querySelector("div#signUpForm").style.display = "none";
-	document.querySelector("header").style.display = "flex"
+	document.querySelector("div#homePage").style.display = "block";
 }
 
-
-
+function home(){
+  document.querySelector("div#loginForm").style.display = "none";
+	document.querySelector("div#signUpForm").style.display = "none";
+  document.querySelector("div#homePage").style.display = "none";
+	document.querySelector("header").style.display = "flex";
+}

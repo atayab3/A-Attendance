@@ -2,31 +2,30 @@
 <html>
 	<meta charset="UTF-8">
 	<title>A+ Attendance</title>
+  
+
 
 <head>
 	<link href="style.css" rel="stylesheet" type="text/css">
-
 </head>
 
 <body>
-	
-	
 	<h1 id="title">A+ Attendance</h1>
 	
 	
 	
 	
 <!-- Navigation bar, followed this video loosely: https://www.youtube.com/watch?v=PwWHL3RyQgk&t=433s	 -->
-	<header>
-		<nav class="nav_bar" >
-			<ul>
-				<li> <a href="#">Home </a> </li>
-				<li><a href="#"> Attendance </a>  </li>
-				<li> <a href="#"> Health </a> </li>
-				<li> <a href="#">Students </a> </li>
-			</ul>
-		</nav>
-	</header>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <header>
+    <nav class="navbar">
+      <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#"><i class="fa fa-fw fa-check"></i> Attendance</a>
+      <a href="#"><i class="fa fa-fw fa-heart"></i> Health</a>
+      <a href="#"><i class="fa fa-fw fa-user"></i> Students</a>
+    </nav>
+  </header>
+
 	
 <!--  Login page	 -->
 	<div id="loginForm">
@@ -38,7 +37,6 @@
 		<div id="notExistingUser" >
 			<p >Not an existing user? Sign up!</p>	
 		</div>
-	
 	</div>
 
 	
@@ -56,15 +54,30 @@
 		<input type="text" id="confirmpw" name="confirmpw" value="***********"><br>
 		<p>Email</p>
 		<input type="text" id="email" name="email" value="adamsmith@gmail.com"><br>
-		<input type="button" id="signup" value="Sign Up"><br
-															 > 
+		<input type="button" id="signup" value="Sign Up"><br> 
 		<div id="isExistingUser" >
 			<p >Already have an account? Log in</p>	
 		</div>
-	
 	</div>
 
 
+  <div id="homePage" style="display:none;"> 
+    <div class="attendButton">
+      <img src="home-icon.png" class = "center">
+      <p>ATTENDANCE</p> 
+      <button class="attendbtn"></button>
+    </div><br><br><br><br>
+    <div class="healthButton">
+      <img src="health-icon.png" class = "center">
+      <p>HEALTH</p>
+      <button class="healthbtn"></button>
+    </div><br><br><br><br>
+    <div class="directButton">
+      <img src="direct-icon.webp" class = "center">
+      <p>STUDENTS</p>
+      <button class="directbtn"></button>
+    </div>
+  </div>
 
 <script src = "script.js"></script> 
 	
