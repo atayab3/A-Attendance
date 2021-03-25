@@ -80,7 +80,12 @@ p, title, h1 {
 	 text-align: center;
 }
 
-
 #notExistingUser:hover, #isExistingUser:hover {
   color: blue;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 20px 80px 20px 80px;
 }
