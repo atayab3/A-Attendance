@@ -17,14 +17,14 @@
 	
 <!-- Navigation bar, followed this video loosely: https://www.youtube.com/watch?v=PwWHL3RyQgk&t=433s	 -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <header>
+  <header>
     <nav class="navbar">
       <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
       <a href="#"><i class="fa fa-fw fa-check"></i> Attendance</a>
       <a href="#"><i class="fa fa-fw fa-heart"></i> Health</a>
       <a href="#"><i class="fa fa-fw fa-user"></i> Students</a>
     </nav>
-  </header>
+  </header>
 
 	
 <!--  Login page	 -->
@@ -67,17 +67,74 @@
       <p>ATTENDANCE</p> 
       <button class="attendbtn"></button>
     </div><br><br><br><br>
+	  
     <div class="healthButton">
       <img src="health-icon.png" class = "center">
       <p>HEALTH</p>
       <button class="healthbtn"></button>
     </div><br><br><br><br>
+	  
     <div class="directButton">
       <img src="direct-icon.webp" class = "center">
       <p>STUDENTS</p>
       <button class="directbtn"></button>
     </div>
   </div>
+	
+	<div id="attendancePage" style="display: none;" >
+		<h2 id="currentDate"> </h2>
+		<button id="inPersonbtn" >
+			In-Person
+		</button>
+		
+		<button id="remotebtn">
+			Remote
+		</button>
+		
+		<table id="inPersonTable">
+		  <tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Present</th>
+		  </tr>
+			
+		  <tr>
+			<td>Anita</td>
+			<td>Padman</td>
+			<td > </td>
+		  </tr>
+			
+		  <tr>
+			<td>Manaal</td>
+			<td>Mariyah</td>
+			<td> </td>
+		  </tr>
+		</table>
+		
+		<table id="remoteTable" style="display:none;" >
+		  <tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Present</th>
+		  </tr>
+			
+		  <tr>
+			<td>Adam </td>
+			<td>Tayabali</td>
+			<td> </td>
+		  </tr>
+		  <tr>
+			<td>Kholouh</td>
+			<td>K.</td>
+			<td> </td>
+		  </tr>
+		</table>
+		
+		<button id="submitAttendance">
+			Submit
+		</button>
+		
+	</div>
 
 <script src = "script.js"></script> 
 	
