@@ -54,18 +54,22 @@ function attendance(){
 
 
 var attendancePage = document.getElementById('attendancePage');
-attendancePage.querySelector('button#inPersonbtn').addEventListener("click",  function(){
+attendancePage.querySelector('input#inPersonBtn').addEventListener("click",  function(){
 	document.querySelector("table#inPersonTable").style.display = "block";
 	document.querySelector("table#remoteTable").style.display = "none";
 	markPresent("inPerson")
 } );
 
-attendancePage.querySelector('button#remotebtn').addEventListener("click", function(){
+attendancePage.querySelector('input#remoteBtn').addEventListener("click", function(){
 	document.querySelector("table#inPersonTable").style.display = "none";
 	document.querySelector("table#remoteTable").style.display = "block";
 	markPresent("remote")
 } );
 
+//event listener to add pop up for submit button
+attendancePage.querySelector('input#submitAttend').addEventListener("click", function(){
+	document.body.style.backgroundColor = "yellow";
+} );
 
 // This function handles the logic for when the present box of a student is clicked is clicked
 function markPresent(tabletype){

@@ -1,3 +1,11 @@
+body {
+    background-color: rgb(186, 217, 243);
+}
+
+h3 {
+  text-align: center;
+}
+
 header{
 	justify-content: space-around;
 	align-items: center;
@@ -5,7 +13,29 @@ header{
 	display: none;
 } 
 
-p, title, h1 {
+p, title, h1, h3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#outer{
+    width:100%;
+    text-align: center;
+}
+
+
+.btn2 {
+  display: inline-block;
+  /* margin-left: 50%;
+  margin-right: 25%; */
+  background-color: rgb(247, 200, 72);
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+
+.btn4 {
+  margin-left: 50%;
+  margin-right: 25%;
+  background-color: rgb(247, 200, 72);
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
@@ -34,12 +64,18 @@ p, title, h1 {
 }
 
 
-.center {
+.center{
   display: block;
   margin-left: auto;
   margin-right: auto;
   height: 100px;
   width: 100px;
+}
+
+.tableClass {
+  position: relative;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 .attendButton, .healthButton, .directButton {
@@ -84,8 +120,13 @@ p, title, h1 {
   color: blue;
 }
 
+table {
+  text-align: center;
+  display: block;
+}
+
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid rgb(7, 5, 2);
   text-align: left;
   padding: 20px 80px 20px 80px;
 }
