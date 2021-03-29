@@ -49,6 +49,7 @@ function attendance(){
 	document.getElementById('currentDate').innerHTML= date;
 	
 	document.querySelector("div#homePage").style.display = "none";
+	document.querySelector("div#directoryPage").style.display = "none";
 	document.querySelector("div#attendancePage").style.display = "block";
 	markPresent("inPerson")
 }
@@ -115,7 +116,9 @@ function health(){
 	document.getElementById('currentDate').innerHTML= date;
 	
 	document.querySelector("div#homePage").style.display = "none";
+	document.querySelector("div#directoryPage").style.display = "none";
 	document.querySelector("div#healthPage").style.display = "block";
+
 }
 
 //when quarantine buttons are clicked
@@ -132,3 +135,63 @@ function setColor(btn, color) {
   }
 }
 
+// -- DIRECTORY PAGE -- 
+//Transition to directory page from homePage
+homePage.querySelector('.directButton').addEventListener("click", directory);
+
+// reveals mail popup 
+function togglePopup(){
+	document.getElementById("mailPopup").classList.toggle("active");
+  }
+
+function createStudentList(){
+
+	studentList = document.getElementById('studentList'); //populate all students in studentList div
+	var allStudents = document.createElement('ul');
+	var students = ['John Doe', 'Sue Ellen', 'Lucy Hale', 'Tom Harris', 'Anna Marie','Chris Pine', 'Jeff Rogers', 'Arthur Lee'];
+
+	//creates an li element for each student
+	for(i=0; i<students.length; i++){
+
+		var studentRow=document.createElement('li');
+		studentRow.innerHTML=students[i];
+
+		//each student mail icon opens mail popup
+		var mailIcon = document.createElement('i');
+		mailIcon.classList.add('fa', 'fa-envelope-square', 'fa-3x');
+		mailIcon.setAttribute('id', 'mailBtn');
+		mailIcon.addEventListener("click", togglePopup);
+		studentRow.appendChild(mailIcon);
+
+		//each student heart icon navigates to health portal info
+		var heartIcon = document.createElement('i'); 
+		heartIcon.classList.add('fa', 'fa-heart', 'fa-3x');
+		heartIcon.addEventListener("click", function(){ health(); });
+		studentRow.appendChild(heartIcon);
+
+		var schedule = document.createElement('select'); //schedule drop down (options: Remote, Monday/Wednesday, Tuesday/Thursday)
+		schedule.setAttribute('id', 'schedule');
+		var remote = document.createElement('option');
+		remote.innerHTML = 'Remote';
+		var monWed = document.createElement('option');
+		monWed.innerHTML = 'M/W';
+		var tueThurs = document.createElement('option');
+		tueThurs.innerHTML = 'T/T';
+
+		schedule.appendChild(remote);
+		schedule.appendChild(monWed);
+		schedule.appendChild(tueThurs);
+
+		studentRow.appendChild(schedule);
+		allStudents.appendChild(studentRow);
+	}
+
+	studentList.append(allStudents);
+}
+
+function directory(){
+	document.querySelector("div#homePage").style.display = "none";
+	document.querySelector("div#attendancePage").style.display = "none";
+	document.querySelector("div#directoryPage").style.display = "block";
+	createStudentList();
+}

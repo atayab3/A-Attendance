@@ -3,6 +3,10 @@
 	<meta charset="UTF-8">
 	<title>A+ Attendance</title>
 
+<!-- Load Font Awesome for Arrow Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
   <!-- Load style sheets -->
 <link rel="stylesheet" href=
   "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
@@ -194,6 +198,45 @@
 		</table>
 		<br>
 		
+	</div>
+
+	<div id="directoryPage" style="display: none;">
+		<!-- TO DO: link the heart icon to health portal screen -->
+
+		<!-- Mail Popup, template code modified from https://www.youtube.com/watch?v=iE_6pQ3RlZU -->
+		<div class="popup" id="mailPopup">
+			<div class="overlay"></div>
+			<div class="content">
+			  <div class="close-btn" onclick="togglePopup()">&times;</div>
+			  <label for="email-address">To:</label>
+			  <input type="text" name = "email-address" id ="email-address">
+			  <!-- <input type="text" name = "email-body" id ="email-body"> -->
+			  <textarea name="paragraph_text" cols="50" rows="5"></textarea>
+			  <div id="send-attach-div">
+				<button id="sendMailBtn">Send</button>
+				<!-- attach e-mail icon, to be implemented in GR5 -->
+				<i class="fa fa-paperclip fa-lg"></i>
+			  </div>
+			  <button id="clearMailBtn">Clear</button>
+			</div>
+		  </div>
+
+		<!-- search bar and student list   -->
+		<div class="flex">
+			<div class="form-outline">
+				<input type="search" id="form1" class="form-control" placeholder="Search" />
+			</div>
+			<button type="button" class="btn btn-primary">
+				<i class="fa fa-search"></i>
+			</button>
+		</div>   
+		<h2 style= "text-align: center;">Students</h2>
+		<div id = studentList> 
+			<!-- all student info is populated in script.js createStudentList() -->
+		</div>
+
+
+
 	</div>
 
 

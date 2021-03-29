@@ -1,27 +1,29 @@
 body {
-    background-color: rgb(186, 217, 243);
+  background-color: rgb(186, 217, 243);
 }
 
 h3 {
   text-align: center;
 }
 
-header{
-	justify-content: space-around;
-	align-items: center;
-	padding:30px 10%;
-	display: none;
-} 
+header {
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 10%;
+  display: none;
+}
 
-p, title, h1, h3 {
+p,
+title,
+h1,
+h3 {
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
-#outer{
-    width:100%;
-    text-align: center;
+#outer {
+  width: 100%;
+  text-align: center;
 }
-
 
 .btn2 {
   display: inline-block;
@@ -31,7 +33,6 @@ p, title, h1, h3 {
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
-
 .btn4 {
   margin-left: 50%;
   margin-right: 25%;
@@ -39,29 +40,25 @@ p, title, h1, h3 {
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
-.btn5{
+.btn5 {
   display: inline-block;
   border-radius: 50px;
   border-color: rgb(247, 200, 72);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 
-  
-  font-family: "Lucida Console", "Courier New", monospace;  
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
-.btn6{
+.btn6 {
   display: inline-block;
   border-radius: 50px;
   border-color: rgb(247, 200, 72);
   background-color: rgb(247, 200, 72);
-  font-family: "Lucida Console", "Courier New",
-  monospace;  
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
-
-
-.navbar{
-	width: 100%;
+.navbar {
+  width: 100%;
   background-color: #555;
   overflow: auto;
 }
@@ -80,12 +77,11 @@ p, title, h1, h3 {
   background-color: rgb(241, 179, 43);
 }
 .navbar li a {
-	transition: all 0.3s ease 0s;
-	text-decoration: none;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
 }
 
-
-.center{
+.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -99,7 +95,9 @@ p, title, h1, h3 {
   margin-right: 25%;
 }
 
-.attendButton, .healthButton, .directButton {
+.attendButton,
+.healthButton,
+.directButton {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -109,12 +107,16 @@ p, title, h1, h3 {
 }
 
 /* Make the image responsive */
-.attendButton img, .healthButton img, .directButton img{
+.attendButton img,
+.healthButton img,
+.directButton img {
   width: 100%;
   height: auto;
 }
 
-.attendButton .attendbtn, .healthButton .healthbtn, .directButton .directbtn {
+.attendButton .attendbtn,
+.healthButton .healthbtn,
+.directButton .directbtn {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -129,15 +131,21 @@ p, title, h1, h3 {
   border-radius: 50px;
 }
 
-.attendButton .attendbtn:hover, .healthButton .healthbtn:hover, .directButton .directbtn:hover {
+.attendButton .attendbtn:hover,
+.healthButton .healthbtn:hover,
+.directButton .directbtn:hover {
   background-color: rgba(0, 0, 0, 0.116);
 }
 
-#title, #loginForm, #signUpForm, #homePage{
-	 text-align: center;
+#title,
+#loginForm,
+#signUpForm,
+#homePage {
+  text-align: center;
 }
 
-#notExistingUser:hover, #isExistingUser:hover {
+#notExistingUser:hover,
+#isExistingUser:hover {
   color: blue;
 }
 
@@ -146,8 +154,136 @@ table {
   display: block;
 }
 
-td, th {
+td,
+th {
   border: 1px solid rgb(7, 5, 2);
   text-align: left;
   padding: 20px 80px 20px 80px;
+}
+
+/* student directory styling */
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+#studentList li {
+  padding: 5px;
+  border: 1px solid rgb(7, 5, 2);
+}
+
+#studentList i {
+  padding: 20px;
+}
+
+#studentList ul {
+  list-style-type: none;
+}
+
+#studentList {
+  overflow-y: scroll;
+  height: 400px;
+  width: 650px;
+  margin: 0 auto;
+}
+
+i.fa.fa-envelope-square {
+  color: white;
+}
+
+i.fa.fa-heart {
+  color: red;
+}
+
+#schedule {
+  float: right;
+  padding-top: 15px;
+  width: 80px;
+  height: 35px;
+  text-align: center;
+}
+
+/* Popup Styling */
+.popup .overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  display: none;
+}
+
+.popup .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #fff;
+  width: 500px;
+  height: 250px;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.popup .close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.popup.active .overlay {
+  display: block;
+}
+
+.popup.active .content {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#mailButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #222;
+  color: #222;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: #fff;
+}
+
+#email-address {
+  width: 360px;
+}
+/* #email-body {
+  height: 145px;
+  width: 460px;
+} */
+
+#send-attach-div {
+  float: left;
+}
+
+#clearMailBtn {
+  float: right;
 }
