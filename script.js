@@ -41,6 +41,7 @@ function login(){
 var homePage = document.getElementById('homePage');
 homePage.querySelector('.attendButton').addEventListener("click", attendance)
 
+
 function attendance(){
 	//Got the date from stack overflow, can change https://stackoverflow.com/questions/25445377/how-to-get-current-date-without-time/25445633
 	var nowDate = new Date(); 
@@ -103,6 +104,31 @@ function markPresent(tabletype){
 	}
 }
 
+//Transition to health page from homePage
+var homePage = document.getElementById('homePage');
+homePage.querySelector('.healthButton').addEventListener("click", health)
 
+function health(){
+	//Got the date from stack overflow, can change https://stackoverflow.com/questions/25445377/how-to-get-current-date-without-time/25445633
+	var nowDate = new Date(); 
+	var date = nowDate.getFullYear()+'/'+(nowDate.getMonth()+1)+'/'+nowDate.getDate();
+	document.getElementById('currentDate').innerHTML= date;
+	
+	document.querySelector("div#homePage").style.display = "none";
+	document.querySelector("div#healthPage").style.display = "block";
+}
 
+//when quarantine buttons are clicked
+var count = 1;
+function setColor(btn, color) {
+  var property = document.getElementById(btn);
+  if (count == 0) {
+      property.style.backgroundColor = "#FFFFFF"
+            count = 1;        
+  }
+  else {
+    property.style.backgroundColor = "#7FFF00"
+    count = 0;
+  }
+}
 
