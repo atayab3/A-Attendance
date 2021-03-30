@@ -211,13 +211,13 @@
 			  <label for="email-address">To:</label>
 			  <input type="text" name = "email-address" id ="email-address">
 			  <!-- <input type="text" name = "email-body" id ="email-body"> -->
-			  <textarea name="paragraph_text" cols="50" rows="5"></textarea>
+			  <textarea id="email-body" name="paragraph_text" cols="50" rows="5"></textarea>
 			  <div id="send-attach-div">
 				<button id="sendMailBtn">Send</button>
 				<!-- attach e-mail icon, to be implemented in GR5 -->
 				<i class="fa fa-paperclip fa-lg"></i>
 			  </div>
-			  <button id="clearMailBtn">Clear</button>
+			  <button id="clearMailBtn" onclick = "clearEmail()">Clear</button>
 			</div>
 		  </div>
 

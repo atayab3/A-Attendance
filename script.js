@@ -135,6 +135,7 @@ function createStudentList(){
 	studentList = document.getElementById('studentList'); //populate all students in studentList div
 	var allStudents = document.createElement('ul');
 	var students = ['John Doe', 'Sue Ellen', 'Lucy Hale', 'Tom Harris', 'Anna Marie','Chris Pine', 'Jeff Rogers', 'Arthur Lee'];
+	var HybridDay = ['T/T', 'Remote', 'Remote', 'M/W', 'M/W', 'Remote', 'T/T', 'Remote'];
 
 	//creates an li element for each student
 	for(i=0; i<students.length; i++){
@@ -168,11 +169,19 @@ function createStudentList(){
 		schedule.appendChild(monWed);
 		schedule.appendChild(tueThurs);
 
+		schedule.value=HybridDay[i]
+		// set student schedule in drop down
+
 		studentRow.appendChild(schedule);
 		allStudents.appendChild(studentRow);
 	}
 
 	studentList.append(allStudents);
+}
+
+// clear email body upon button click
+function clearEmail(){
+	document.getElementById('email-body').value = "";
 }
 
 function directory(){
