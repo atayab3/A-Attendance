@@ -1,0 +1,83 @@
+<!Doctype html>
+<html id="healthHtml">
+  <meta charset="UTF-8">
+	<title>A+ Attendance</title>
+
+<!-- Load Font Awesome for Arrow Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- Load style sheets -->
+<link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+
+<meta name="viewport" content=
+  "width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js">
+</script>
+  
+
+
+<head>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+  <body onload="health();">
+	  <h1 style="font-weight: bold;" id="title">A+ Attendance</h1><br>
+  
+    <div class="navbar">
+      <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="attend.html"><i class="fa fa-fw fa-check"></i> Attendance</a>
+      <a class="active" href="health.html"><i class="fa fa-fw fa-heart"></i> Health</a>
+      <a href="direct.html"><i class="fa fa-fw fa-user"></i> Students</a>
+    </div>
+  
+    <div id="healthPage" >
+    <h3 id="currentDate"> </h3>
+    	<!-- search bar-->
+		<div class="flex">
+			<div class="form-outline">
+				<input type="search" id="form1" class="form-control" placeholder="Search" />
+			</div>
+			<button type="button" onclick="updateStudent()" class="btn btn-primary">
+				<i class="fa fa-search"></i>
+			</button>
+		</div> 
+
+
+    <br>
+  
+
+		<table class="tableClass" id="healthTable">	
+		  <tr>
+			<td id="studentName"><h3>Arthur Lee<h3></td>
+		  </tr>
+
+      <tr>
+			<td style="height:200px"><h3>Days in Quarantine<h3>
+
+      <div id="outer"> 
+
+      </div> <br>
+
+      </td>
+      
+		  </tr>
+		
+      <tr>
+			<td id="nurseNote"><p>Nurse's Notes: Coughing and mild fever. <p></td>
+		  </tr>
+
+		</table>
+		<br>
+		
+	</div>
+
+  <script src = "script.js"></script> 
+  </body>
+</html>

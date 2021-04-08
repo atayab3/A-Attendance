@@ -11,7 +11,6 @@
 <link rel="stylesheet" href=
   "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
 
-<link rel="stylesheet" href="mainLayout.css">
 <meta name="viewport" content=
   "width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -36,14 +35,16 @@
 	
 <!-- Navigation bar, followed this video loosely: https://www.youtube.com/watch?v=PwWHL3RyQgk&t=433s	 -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <div id="navbar" style="display: none";> -->
   <header>
     <nav class="navbar">
       <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-      <a href="#"><i class="fa fa-fw fa-check"></i> Attendance</a>
-      <a href="#"><i class="fa fa-fw fa-heart"></i> Health</a>
-      <a href="#"><i class="fa fa-fw fa-user"></i> Students</a>
+      <a href="attend.html"><i class="fa fa-fw fa-check"></i> Attendance</a>
+      <a href="health.html"><i class="fa fa-fw fa-heart"></i> Health</a>
+      <a href="direct.html"><i class="fa fa-fw fa-user"></i> Students</a>
     </nav>
   </header>
+  <!-- </div> -->
 
 	
 <!--  Login page	 -->
@@ -52,192 +53,12 @@
 		<input type="text" id="username" name="username" value="xxxxx@gmail.com"><br>
 		<p>Password</p>
 		<input type="text" id="password" name="password" value="***********"><br>
-		<input type="button" id="login" value="Login"><br> 
+		<a href="home.html"><input type="button" id="login" value="Login"><br> </a>
 		<div id="notExistingUser" >
-			<p >Not an existing user? Sign up!</p>	
+			<a href="signup.html"><p >Not an existing user? Sign up!</p></a>
 		</div>
 	</div>
 
-	
-<!--  SignUp page-->
-	<div id="signUpForm" style="display:none;">
-		<p>First Name </p>
-		<input type="text" id="fname" name="fname" value="Adam"><br>
-		<p>Last Name</p>
-		<input type="text" id="lname" name="lname" value="Smith"><br>
-		<p>School</p>
-		<input type="text" id="school" name="school" value="MyHero Academia"><br>
-		<p>Password</p>
-		<input type="text" id="password" name="password" value="***********"><br>
-		<p>Confirm Password</p>
-		<input type="text" id="confirmpw" name="confirmpw" value="***********"><br>
-		<p>Email</p>
-		<input type="text" id="email" name="email" value="adamsmith@gmail.com"><br>
-		<input type="button" id="signup" value="Sign Up"><br> 
-		<div id="isExistingUser" >
-			<p >Already have an account? Log in</p>	
-		</div>
-	</div>
-
-
-  <div id="homePage" style="display:none;"> 
-    <div class="attendButton">
-      <img src="home-icon.png" class = "center">
-      <p style="font-weight: bold;">ATTENDANCE</p> 
-      <button class="attendbtn"></button>
-    </div><br><br><br><br>
-	  
-    <div class="healthButton">
-      <img src="health-icon.png" class = "center">
-      <p style="font-weight: bold;">HEALTH</p>
-      <button class="healthbtn"></button>
-    </div><br><br><br><br>
-	  
-    <div class="directButton">
-      <img src="direct-icon.webp" class = "center">
-      <p style="font-weight: bold;">STUDENTS</p>
-      <button class="directbtn"></button>
-    </div>
-  </div>
-	
-	<div id="attendancePage" style="display: none;" >
-		<h3 id="currentDate"> </h3>
-
-    <div id="outer">
-      <input class="btn2" type="button" id="inPersonBtn" value="In-Person">
-		  <input class="btn2" type="button" id="remoteBtn" value="Remote">
-		</div> <br>
-
-		<table class="tableClass" id="inPersonTable">
-		  <tr>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Present</th>
-		  </tr>
-			
-		  <tr>
-			<td>Anita</td>
-			<td>Padman</td>
-			<td > </td>
-		  </tr>
-			
-		  <tr>
-			<td>Manaal</td>
-			<td>Mariyah</td>
-			<td> </td>
-		  </tr>
-		</table>
-		
-		<table class="tableClass", id="remoteTable" style="display:none;" >
-		  <tr>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Present</th>
-		  </tr>
-			
-		  <tr>
-			<td>Adam </td>
-			<td>Tayabali</td>
-			<td> </td>
-		  </tr>
-		  <tr>
-			<td>Kholoud</td>
-			<td>K.</td>
-			<td> </td>
-		  </tr>
-		</table>
-		<br>
-		<input class="btn4" type="button" id="submitAttend" value="Submit">
-		
-	</div>
-
-
-	
-	<div id="healthPage" style="display: none;" >
-		<input type="text" id="username" name="searchBar" value="Search for student..." style="margin-left: 20px";>  
-
-    <input class="btn2"  type="button" id="b1" value = "?" >
-
-
-    <br>
-  
-
-		<table class="tableClass" id="healthTable">	
-		  <tr>
-			<td><h3>Student Name<h3></td>
-		  </tr>
-
-      <tr>
-			<td style="height:200px"><h3>Days in Quarantine<h3>
-
-      <div id="outer">
-      <input class="btn6" type="button" id="b1" value="01" style="font-size : 15px;">
-      <input class="btn6" type="button" id="b1" value="02" style="font-size : 15px;">
-      <input class="btn6" type="button" id="b1" value="03" style="font-size : 15px;">
-      <input class="btn6" type="button" id="b1" value="04" style="font-size : 15px;">
-      <input class="btn5" type="button" id="b1" value="05" style="font-size : 15px;">
-      <input class="btn5" type="button" id="b1" value="06" style="font-size : 15px;">
-      <input class="btn5" type="button" id="b1" value="07" style="font-size : 15px;">
-      <input class="btn5" type="button" id="b1" value="08" style="font-size : 15px;">
-      <input class="btn5" type="button" id="b1" value="09" style="font-size : 15px;">
-      <input class="btn5" type="button" id="b1" value="10" style="font-size : 15px;">
-      <input class="btn5" type="button" id="b1" value="11" style="font-size : 15px;">
-      <input class="btn5" type="button" id="b1" value="12" style="font-size : 15px;">
-      <input class="btn5" type="button" id="b1" value="13" style="font-size : 15px;">
-      <input class="btn5" type="button" id="b1" value="14" style="font-size : 15px;">
-      </div> <br>
-
-      </td>
-      
-		  </tr>
-		
-      <tr>
-			<td><p>Nurse's Notes: Coughing and mild fever. <p></td>
-		  </tr>
-
-		</table>
-		<br>
-		
-	</div>
-
-	<div id="directoryPage" style="display: none;">
-		<!-- TO DO: link the heart icon to health portal screen -->
-
-		<!-- Mail Popup, template code modified from https://www.youtube.com/watch?v=iE_6pQ3RlZU -->
-		<div class="popup" id="mailPopup">
-			<div class="overlay"></div>
-			<div class="content">
-			  <div class="close-btn" onclick="togglePopup()">&times;</div>
-			  <label for="email-address">To:</label>
-			  <input type="text" name = "email-address" id ="email-address">
-			  <!-- <input type="text" name = "email-body" id ="email-body"> -->
-			  <textarea id="email-body" name="paragraph_text" cols="50" rows="5"></textarea>
-			  <div id="send-attach-div">
-				<button id="sendMailBtn">Send</button>
-				<!-- attach e-mail icon, to be implemented in GR5 -->
-				<i class="fa fa-paperclip fa-lg"></i>
-			  </div>
-			  <button id="clearMailBtn" onclick = "clearEmail()">Clear</button>
-			</div>
-		  </div>
-
-		<!-- search bar and student list   -->
-		<div class="flex">
-			<div class="form-outline">
-				<input type="search" id="form1" class="form-control" placeholder="Search" />
-			</div>
-			<button type="button" class="btn btn-primary">
-				<i class="fa fa-search"></i>
-			</button>
-		</div>   
-		<h2 style= "text-align: center;">Students</h2>
-		<div id = studentList> 
-			<!-- all student info is populated in script.js createStudentList() -->
-		</div>
-
-
-
-	</div>
 
 
 <script src = "script.js"></script> 

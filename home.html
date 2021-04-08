@@ -1,0 +1,53 @@
+<!Doctype html>
+<html id="healthHtml">
+  <meta charset="UTF-8">
+	<title>A+ Attendance</title>
+
+<!-- Load Font Awesome for Arrow Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- Load style sheets -->
+<link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+
+<meta name="viewport" content=
+  "width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js">
+</script>
+  
+
+
+<head>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+  <body>
+	  <h1 style="font-weight: bold;" id="title">A+ Attendance</h1><br>
+    <div id="homePage"> 
+      <div class="attendButton">
+        <img src="home-icon.png" class = "center">
+        <p style="font-weight: bold;">ATTENDANCE</p> 
+        <button class="attendbtn" id="attendbtn" onclick="goAttendance();"></button>
+      </div><br><br><br><br>
+      
+      <div class="healthButton">
+        <img src="health-icon.png" class = "center">
+        <p style="font-weight: bold;">HEALTH</p>
+        <button class="healthbtn" id="healthbtn" onclick="goHealth();"></button>
+      </div><br><br><br><br>
+      
+      <div class="directButton">
+        <img src="direct-icon.webp" class = "center">
+        <p style="font-weight: bold;">STUDENTS</p>
+        <button class="directbtn" id="directbtn" onclick="goDirectory();"></button>
+      </div>
+    </div>
+    <script src = "script.js"></script> 
+  </body>
+</html>

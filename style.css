@@ -81,6 +81,10 @@ h3 {
   text-decoration: none;
 }
 
+#currentDate {
+  padding-top: 50px;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -286,4 +290,7 @@ i.fa.fa-heart {
 
 #clearMailBtn {
   float: right;
+}
+#name1 {
+  transform: scale(2);
 }

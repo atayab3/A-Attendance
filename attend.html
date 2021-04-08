@@ -1,0 +1,93 @@
+<!Doctype html>
+<html id="healthHtml">
+  <meta charset="UTF-8">
+	<title>A+ Attendance</title>
+
+<!-- Load Font Awesome for Arrow Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- Load style sheets -->
+<link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+
+<meta name="viewport" content=
+  "width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js">
+</script>
+  
+
+
+<head>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+  <body onload="attendance();">
+	  <h1 style="font-weight: bold;" id="title">A+ Attendance</h1><br>
+
+    <nav class="navbar">
+      <a  href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a class="active" href="attend.html"><i class="fa fa-fw fa-check"></i> Attendance</a>
+      <a href="health.html"><i class="fa fa-fw fa-heart"></i> Health</a>
+      <a href="direct.html"><i class="fa fa-fw fa-user"></i> Students</a>
+    </nav>
+  <div id="attendancePage" >
+    <h3 id="currentDate"> </h3> 
+
+    <div id="outer">
+        <input class="btn2" type="button" id="inPersonBtn" value="In-Person">
+        <input class="btn2" type="button" id="remoteBtn" value="Remote">
+    </div> <br>
+
+    <table class="tableClass" id="inPersonTable">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Present</th>
+        </tr>
+                
+        <tr>
+            <td>Anita</td>
+            <td>Padman</td>
+            <td><input type="checkbox" name="name1" id="name1" /> </td>
+        </tr>
+                
+        <tr>
+            <td>Manaal</td>
+            <td>Mariyah</td>
+            <td><input type="checkbox" name="name2" id="name1" /> </td>
+        </tr>
+    </table>
+        
+    <table class="tableClass", id="remoteTable" style="display:none;" >
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Present</th>
+        </tr>
+        
+        <tr>
+            <td>Adam </td>
+            <td>Tayabali</td>
+            <td><input type="checkbox" name="name1" id="name1" /> </td>
+        </tr>
+        <tr>
+            <td>Kholoud</td>
+            <td>K.</td>
+            <td><input type="checkbox" name="name1" id="name1" /> </td>
+        </tr>
+    </table>
+    <br>
+    <input class="btn4" type="button" id="submitAttend" value="Submit">
+    
+</div>
+
+<script src = "script.js"></script> 
+    
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!Doctype html>
+<html id="healthHtml">
+  <meta charset="UTF-8">
+	<title>A+ Attendance</title>
+
+<!-- Load Font Awesome for Arrow Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- Load style sheets -->
+<link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+
+<meta name="viewport" content=
+  "width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js">
+</script>
+  
+
+
+<head>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+  <body onload="createStudentList();">
+	  <h1 style="font-weight: bold;" id="title">A+ Attendance</h1><br>
+   
+    <nav class="navbar" >
+      <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="attend.html"><i class="fa fa-fw fa-check"></i> Attendance</a>
+      <a href="health.html"><i class="fa fa-fw fa-heart"></i> Health</a>
+      <a class="active" href="direct.html"><i class="fa fa-fw fa-user"></i> Students</a>
+    </nav>
+
+
+  <div id="directoryPage">
+
+		<!-- Mail Popup, template code modified from https://www.youtube.com/watch?v=iE_6pQ3RlZU -->
+		<div class="popup" id="mailPopup">
+			<div class="overlay"></div>
+			<div class="content">
+			  <div class="close-btn" onclick="togglePopup()">&times;</div>
+			  <label for="email-address">To:</label>
+			  <input type="text" name = "email-address" id ="email-address">
+			  <textarea id="email-body" name="paragraph_text" cols="50" rows="5"></textarea>
+			  <div id="send-attach-div">
+				<button id="sendMailBtn" onclick="togglePopup()">Send</button>
+				<!-- attach e-mail icon, to be implemented in GR5 -->
+				<i class="fa fa-paperclip fa-lg"></i>
+			  </div>
+			  <button id="clearMailBtn" onclick = "clearEmail()">Clear</button>
+			</div>
+		  </div>
+
+		<!-- search bar and student list   -->
+		<div class="flex">
+			<div class="form-outline">
+				<input type="search" id="directForm" class="form-control" placeholder="Search" />
+			</div>
+			<button type="button" onclick="findStudent()" class="btn btn-primary">
+				<i class="fa fa-search"></i>
+			</button>
+		</div>   
+		<h2 style= "text-align: center;">Students</h2>
+		<div id = studentList> 
+			<!-- all student info is populated in script.js createStudentList() -->
+		</div>
+
+
+
+	</div>
+
+    <script src = "script.js"></script> 
+  </body>
+</html>
