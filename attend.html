@@ -31,11 +31,14 @@
 	  <h1 style="font-weight: bold;" id="title">A+ Attendance</h1><br>
 
     <nav class="navbar">
-      <a  href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
-      <a class="active" href="attend.html"><i class="fa fa-fw fa-check"></i> Attendance</a>
-      <a href="health.html"><i class="fa fa-fw fa-heart"></i> Health</a>
-      <a href="direct.html"><i class="fa fa-fw fa-user"></i> Students</a>
+      <ul>
+      <li><a  href="home.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+      <li><a class="active" href="attend.html"><i class="fa fa-fw fa-check"></i> Attendance</a></li>
+      <li><a href="health.html"><i class="fa fa-fw fa-heart"></i> Health</a></li>
+      <li><a href="direct.html"><i class="fa fa-fw fa-user"></i> Students</a></li>
+      </ul>
     </nav>
+  
   <div id="attendancePage" >
     <h3 id="currentDate"> </h3> 
 
@@ -122,7 +125,16 @@
         </tr>
     </table>
     <br>
-    <input class="btn4" type="button" id="submitAttend" value="Submit">
+    
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="subTogglePopup()">&times;</div>
+        <p>Attendance was sucessfully submitted!</p>
+      </div>
+    </div>
+ 
+<button class="btn4" id="submitAttend" onclick="subTogglePopup()">Submit</button><br><br><br>
     
 </div>
 

@@ -16,7 +16,7 @@ header {
 p,
 title,
 h1,
-h3 {
+h3,h2 {
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
@@ -57,13 +57,27 @@ h3 {
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
-.navbar {
-  width: 100%;
+.navbar ul {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   background-color: #555;
+}
+
+.navbar {
   overflow: auto;
 }
-.navbar a {
+
+.navbar li{
   float: left;
+}
+
+.navbar a {
+  display: block;
+  float: left;
+  background-color: #555;
   text-align: center;
   padding: 12px;
   color: white;
@@ -77,6 +91,10 @@ h3 {
   background-color: rgb(241, 179, 43);
 }
 .navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   transition: all 0.3s ease 0s;
   text-decoration: none;
 }

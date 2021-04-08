@@ -106,6 +106,12 @@ function togglePopup(){
     document.getElementById("mailPopup").classList.toggle("active");
 }
 
+function subTogglePopup(){
+  document.getElementById("popup-1").classList.toggle("active");
+}
+	
+
+
 function createStudentList(){
     studentList = document.getElementById('studentList'); //populate all students in studentList div
     var allStudents = document.createElement('ul');
