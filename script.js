@@ -25,11 +25,15 @@ function attendance(){
 var attendancePage = document.getElementById('attendancePage');
 if(attendancePage!=null){ //sanity check b/c these output to null if this JS is loaded too soon
     attendancePage.querySelector('input#inPersonBtn').addEventListener("click",  function(){
+		document.getElementById('inPersonBtn').style.backgroundColor='#228B22';
+		document.getElementById('remoteBtn').style.backgroundColor='rgb(247, 200, 72)';
         document.querySelector("table#inPersonTable").style.display = "block";
         document.querySelector("table#remoteTable").style.display = "none";
     } );
 
     attendancePage.querySelector('input#remoteBtn').addEventListener("click", function(){
+		document.getElementById('inPersonBtn').style.backgroundColor='rgb(247, 200, 72)';
+		document.getElementById('remoteBtn').style.backgroundColor='#228B22';
         document.querySelector("table#inPersonTable").style.display = "none";
         document.querySelector("table#remoteTable").style.display = "block";
     } );
