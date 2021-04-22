@@ -43,17 +43,17 @@
     <h3 id="currentDate"> </h3>
     	<!-- search bar-->
 		<div class="flex">
-			<div class="form-outline">
-				<input type="search" id="form1" class="form-control" placeholder="Search" />
+			<div class="form-outline autocomplete">
+				<input type="search" id="directForm" class="form-control" placeholder="Search" />
+        <div class="dialog">   
+				</div> 
 			</div>
-			<button type="button" onclick="updateStudent()" class="btn btn-primary">
+			<button type="button" onclick="updateStudent()" class="btn btn-primary" id="searchBtn">
 				<i class="fa fa-search"></i>
 			</button>
 		</div> 
-
-
     <br>
-  
+
 
 		<table class="tableClass" id="healthTable">	
 		  <tr>

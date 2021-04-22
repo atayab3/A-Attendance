@@ -80,7 +80,7 @@ function health(){
 
 
 function updateStudent(){
-  var studentNameSearch = document.getElementById("form1").value;
+  var studentNameSearch = document.getElementById("directForm").value;
 
   if(studentNameSearch != "" && sickStudents.includes(studentNameSearch)){ //only provide health info for sick students
 	//update student name/nurse note of new student profile upon search 
@@ -203,3 +203,53 @@ function findStudent(){
         studentRow.style.backgroundColor = '#1E90FF';
     }
 }
+
+// Auto complete Search Bar (direct.html and health.html)
+// Logic modified from http://www.kodhus.com/kodnest/codify/SPpeQp
+$(function() {
+    var alreadyFilled = false;
+    function initDialog() {
+        clearDialog();
+        for (var i = 0; i < students.length; i++) {
+            $('.dialog').append('<div>' + students[i] + '</div>');
+        }
+    }
+    function clearDialog() {
+        $('.dialog').empty();
+    }
+    $('body').on('click', '.dialog > div', function() {
+        $('.autocomplete input').val($(this).text()).focus();
+        $('.autocomplete .close').addClass('visible');
+        alreadyFilled = true;
+    });
+    $('.autocomplete .close').click(function() {
+        alreadyFilled = false;
+        $('.dialog').addClass('open');
+        $('.autocomplete input').val('').focus();
+        $(this).removeClass('visible');
+    });
+
+    function match(str) {
+        str = str.toLowerCase();
+        clearDialog();
+        for (var i = 0; i < students.length; i++) {
+            if (students[i].toLowerCase().startsWith(str)) {
+                $('.dialog').append('<div>' + students[i] + '</div>');
+            }
+        }
+    }
+    $('.autocomplete input').on('input', function() {
+        $('.dialog').addClass('open');
+        if($(this).val()== ''){ //do not provide suggestions if query is empty
+            $('.dialog').removeClass('open');
+        }
+        alreadyFilled = false;
+        match($(this).val());
+    });
+    $('body').click(function(e) {
+        if (!$(e.target).is("input, .close")) {
+            $('.dialog').removeClass('open');
+        }
+    });
+    initDialog();
+});

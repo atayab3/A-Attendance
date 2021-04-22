@@ -59,16 +59,18 @@
 			</div>
 		  </div>
 
+		<h2 style= "text-align: center;">Students</h2>
 		<!-- search bar and student list   -->
 		<div class="flex">
-			<div class="form-outline">
+			<div class="form-outline autocomplete">
 				<input type="search" id="directForm" class="form-control" placeholder="Search" />
+				<div class="dialog">   
+				</div> 
 			</div>
-			<button type="button" onclick="findStudent()" class="btn btn-primary">
+			<button type="button" onclick="findStudent()" class="btn btn-primary" id="searchBtn">
 				<i class="fa fa-search"></i>
 			</button>
-		</div>   
-		<h2 style= "text-align: center;">Students</h2>
+		</div>  
 		<div id = studentList> 
 			<!-- all student info is populated in script.js createStudentList() -->
 		</div><br><br>
