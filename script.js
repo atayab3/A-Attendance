@@ -9,6 +9,7 @@ function goDirectory(){
 }
 
 var students = ['John Doe', 'Sue Ellen', 'Lucy Hale', 'Tom Harris', 'Anna Marie','Chris Pine', 'Jeff Rogers', 'Arthur Lee', 'Anita Padman', 'Adam Tayabali', 'Manaal Mariyah', 'Kholoud Khaleel'];
+var parentEmails = ["billdoe@gmail.com", "sally_ellen@yahoo.com", "doughale2012@gmail.com", "timharris@gmail.com", "janelleMarie49@yahoo.com", "jaredPine@gmail.com", "jason202@gmail.com", "erin_lee@yahoo.com", "jayPadman@gmail.com", "sam_tayabali555@gmail.com", "kellyMariyah@gmail.com", "ray_khaleel@gmail.com"];
 var HybridDay = ['T/T', 'Remote', 'Remote', 'M/W', 'M/W', 'Remote', 'T/T', 'Remote', 'M/W', 'Remote', 'T/T', 'Remote']; //schedule for each student in students array (line 11)
 var sickStudents = ['Arthur Lee','Anna Marie', 'Tom Harris'];
 var nurseNotes = ["Coughing and mild fever", "Recently exposed to sick grandparent", "Coughing after Winter Break trip"]
@@ -102,7 +103,11 @@ function updateStudent(){
 //==DIRECTORY PAGE==
 
 // reveals mail popup 
-function togglePopup(){
+function togglePopup(parent){
+
+    var index = students.indexOf(parent);
+    var parentEmail = parentEmails[index];
+    document.getElementById('email-address').value = parentEmail;
     document.getElementById("mailPopup").classList.toggle("active");
 }
 
@@ -127,7 +132,13 @@ function createStudentList(){
         var mailIcon = document.createElement('i');
         mailIcon.classList.add('fa', 'fa-envelope-square', 'fa-3x');
         mailIcon.setAttribute('id', 'mailBtn');
-        mailIcon.addEventListener("click", togglePopup);
+        //mailIcon.addEventListener("click", togglePopup);
+        mailIcon.addEventListener("click", function(event){ 
+            var target = event.target;
+            var parentID = target.parentElement.id;
+            togglePopup(parentID); 
+        });
+        
         studentRow.appendChild(mailIcon);
 
         //each student heart icon navigates to health portal info

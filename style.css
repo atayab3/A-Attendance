@@ -16,7 +16,8 @@ header {
 p,
 title,
 h1,
-h3,h2 {
+h3,
+h2 {
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
@@ -70,7 +71,7 @@ h3,h2 {
   overflow: auto;
 }
 
-.navbar li{
+.navbar li {
   float: left;
 }
 
@@ -195,6 +196,7 @@ th {
 #studentList li {
   padding: 5px;
   border: 1px solid rgb(7, 5, 2);
+  font-weight: bold;
 }
 
 #studentList i {
