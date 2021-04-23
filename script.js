@@ -12,6 +12,7 @@ var students = ['John Doe', 'Sue Ellen', 'Lucy Hale', 'Tom Harris', 'Anna Marie'
 var parentEmails = ["billdoe@gmail.com", "sally_ellen@yahoo.com", "doughale2012@gmail.com", "timharris@gmail.com", "janelleMarie49@yahoo.com", "jaredPine@gmail.com", "jason202@gmail.com", "erin_lee@yahoo.com", "jayPadman@gmail.com", "sam_tayabali555@gmail.com", "kellyMariyah@gmail.com", "ray_khaleel@gmail.com"];
 var HybridDay = ['T/T', 'Remote', 'Remote', 'M/W', 'M/W', 'Remote', 'T/T', 'Remote', 'M/W', 'Remote', 'T/T', 'Remote']; //schedule for each student in students array (line 11)
 var sickStudents = ['Arthur Lee','Anna Marie', 'Tom Harris'];
+var sickDays = [6, 12, 1]; //the number of sick days taken for each sick student
 var nurseNotes = ["Coughing and mild fever", "Recently exposed to sick grandparent", "Coughing after Winter Break trip"]
 //==ATTENDANCE PAGE==
 
@@ -20,21 +21,20 @@ function attendance(){
     var nowDate = new Date(); 
     var date = nowDate.getFullYear()+'/'+(nowDate.getMonth()+1)+'/'+nowDate.getDate();
     document.getElementById('currentDate').innerHTML= date;
-
 }
 
 var attendancePage = document.getElementById('attendancePage');
-if(attendancePage!=null){ //sanity check b/c these output to null if this JS is loaded too soon
+if(attendancePage!=null){ //sanity check b/c these output to null if this JS is loaded too soon 
     attendancePage.querySelector('input#inPersonBtn').addEventListener("click",  function(){
-		document.getElementById('inPersonBtn').style.backgroundColor='#228B22';
-		document.getElementById('remoteBtn').style.backgroundColor='rgb(247, 200, 72)';
+		document.getElementById('inPersonBtn').style.backgroundColor='rgb(247, 200, 72)';
+		document.getElementById('remoteBtn').style.backgroundColor= 'white';
         document.querySelector("table#inPersonTable").style.display = "block";
         document.querySelector("table#remoteTable").style.display = "none";
     } );
 
     attendancePage.querySelector('input#remoteBtn').addEventListener("click", function(){
-		document.getElementById('inPersonBtn').style.backgroundColor='rgb(247, 200, 72)';
-		document.getElementById('remoteBtn').style.backgroundColor='#228B22';
+		document.getElementById('inPersonBtn').style.backgroundColor='white';
+		document.getElementById('remoteBtn').style.backgroundColor='rgb(247, 200, 72)';
         document.querySelector("table#inPersonTable").style.display = "none";
         document.querySelector("table#remoteTable").style.display = "block";
     } );
@@ -45,9 +45,11 @@ if(attendancePage!=null){ //sanity check b/c these output to null if this JS is 
     
 }
 
-function addQuarantine(){
+function addQuarantine(name){
 	var daysInQuarantine = document.getElementById('outer');
-  var numDays = Math.random() * (14);
+  //var numDays = Math.random() * (14); 
+  var index = sickStudents.indexOf(name); 
+  var numDays = sickDays[index]; //find sick days according to index of student name 
 
   //while loop from: https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
   while (daysInQuarantine.firstChild) {
@@ -75,7 +77,7 @@ function health(){
     var nowDate = new Date(); 
     var date = nowDate.getFullYear()+'/'+(nowDate.getMonth()+1)+'/'+nowDate.getDate();
     document.getElementById('currentDate').innerHTML= date;
-    addQuarantine();
+    addQuarantine("Arthur Lee");
 }
 
 
@@ -87,6 +89,7 @@ function updateStudent(){
 	var studentName = document.getElementById('studentName');
     studentName.childNodes[0].textContent = studentNameSearch;
 	var studentIndex = sickStudents.indexOf(studentNameSearch);
+    addQuarantine(studentNameSearch); //calculate sick days
 	document.getElementById('nurseNote').childNodes[0].textContent = "Nurse's Note: " + nurseNotes[studentIndex];
   }
   else{ //error checking in search bar
@@ -97,7 +100,6 @@ function updateStudent(){
 		  alert("This student is not sick and does not have a nurse's note! Try another first and last name");
 	  }
   }
-  addQuarantine()
 }
 
 //==DIRECTORY PAGE==
