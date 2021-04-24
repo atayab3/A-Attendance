@@ -61,15 +61,23 @@ function addQuarantine(name){
       quarantineDay.classList.add("btn6");
     } else{
       quarantineDay.classList.add("btn5");
-
     }
 	quarantineDay.setAttribute("style", "font-size : 15px;");
 	quarantineDay.setAttribute("type", "button");
-	quarantineDay.setAttribute("id", "b" + i);
-    quarantineDay.setAttribute("value", i+1);
-    daysInQuarantine.appendChild(quarantineDay);
+	quarantineDay.setAttribute("id", i);
+  quarantineDay.setAttribute("value", i+1);
+  
+  quarantineDay.onclick = function() { 
+    x = this.id;
+    for (y = 0; y <= x; y++){
+      document.getElementById(y).setAttribute("class", "btn6");
+    }
+    
+    };
+  daysInQuarantine.appendChild(quarantineDay);
 	}
 }
+
 
 //== HEALTH PAGE==
 function health(){
