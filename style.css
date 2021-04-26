@@ -375,3 +375,38 @@ i.fa.fa-heart {
 #searchBtn {
   max-height: 2.5em;
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 500px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .tableClass {
+      position: relative;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .healthClass {
+      margin-left: 5%;
+      margin-right: 5%;
+      height: 500px;
+      width: 90%;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+  }
+  #studentList {
+    overflow-y: scroll;
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #studentList i {
+    padding: 5px;
+  }
+  td, th {
+  border: 1px solid rgb(7, 5, 2);
+  text-align: left;
+  padding: 20px 20px 20px 20px;
+  }
+}
