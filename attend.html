@@ -130,7 +130,11 @@
       <div class="overlay"></div>
       <div class="content">
         <div class="close-btn" onclick="subTogglePopup()">&times;</div>
-        <p style="padding-top: 90px;" >Attendance was successfully submitted!</p>
+        <p style="padding-top: 90px;" >Are you sure you want to submit attendance?</p>
+        <div id="outer">
+          <input class="btn2" type="button" id="noBtn" value="No" onclick="subTogglePopup()">
+          <input class="btn2" type="button" id="yesBtn" value="Yes" onclick="subTogglePopup()">
+        </div> <br> 
       </div>
     </div>
  
